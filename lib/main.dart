@@ -33,73 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Expanded Row Sample'),
+        title: const Text('choose a location'),
         backgroundColor: Colors.red,
         centerTitle: true,
-        elevation: 100.0,
+        elevation: 0.0,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            ninjalevel += 1;
-          });
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.blueGrey,
-      ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(40.0, 30.0, 10.0, 20.0),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Center(
-            child: CircleAvatar(
-              backgroundImage: AssetImage('assets/song.png'),
-              radius: 25.0,
-            ),
-          ),
-          Divider(
-            height: 90.0,
-            color: Colors.amberAccent,
-          ),
-          SizedBox(height: 20.0),
-          Text(
-            'Name',
-            style: TextStyle(
-              color: Colors.grey,
-              letterSpacing: 2.0,
-            ),
-          ),
-          SizedBox(height: 50.0),
-          Text('Prenom',
-              style: TextStyle(
-                color: Colors.redAccent,
-                letterSpacing: 4.0,
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-              )),
-          SizedBox(height: 50.0),
-          Text('$ninjalevel',
-              style: TextStyle(
-                color: Colors.redAccent,
-                letterSpacing: 4.0,
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-              )),
-          SizedBox(height: 50.0),
-          Row(children: <Widget>[
-            Icon(
-              Icons.email,
-              color: Colors.grey[400],
-            ),
-            SizedBox(width: 10.0),
-            Text(
-              'rahmabalti02@gmail.com',
-              style: TextStyle(
-                color: Colors.grey[400],
-              ),
-            ),
-          ]),
-        ]),
-      ),
+      body: Text('choose location screen'),
     );
   }
 }
